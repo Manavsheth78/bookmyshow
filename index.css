@@ -1,4 +1,5 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -22,7 +23,7 @@
 /* rem, em , px, %, vw, vh */
 
 .logo img {
-    width: 130px;
+    width: 110px;
     margin: 0 10px 0 ;
     
 }
@@ -43,10 +44,6 @@
     align-items: center;
 }
 
-input[type="text"]{
-    
-    
-}
 
 
 .searchtab{
@@ -91,8 +88,8 @@ input[type="text"]{
 }
     /* modal */
 .modal{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 450px;
     border: 1px solid black;
     border-radius: 10px;
     position: absolute;
@@ -103,19 +100,134 @@ input[type="text"]{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-
+    /* overflow: hidden; */
+    
 }
-.modal input{
-    width: 100%;
-    height: 30px;
-    margin: 20px 0;
-    /* border: none ; */
-    /* outline: none; */
-    border-radius: 10px;
-}
-
 .modal h1{
     text-align: center;
-    line-height: 1.5;
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 20px;
 }
+
+.signin_options{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 20px;
+        margin: 20px 20px;
+        padding: 25px;
+           
+}
+
+.signin_options_btn{
+    width: 300px;
+    height: 38px;
+    box-sizing: border-box;
+    padding: 5px 0px 0;
+    text-align: center;
+   border:  1px solid black;
+    margin:  7px 10px;
+    font-family: inherit;
+    font-weight: 400;
+    border-radius: 5px;
+    border-width: 1px solid black;
+
+}
+
+.signin_options_btn:hover{
+    background-color:rgb(242, 242, 242);
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.signin_btn_icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+   float: left;
+   text-align: center;
+   position: relative;
+   left: 20px;
+   top: 5px;
+
+}
+   
+
+.cross{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.or{
+   text-align: center;
+   font-size: 17px;
+   display: block;
+   color:rgb(107, 107, 107)
+}
+
+.alternative{
+    /* border: 1px solid black; */
+   padding: 50px 20px ;
+        margin: 40px;
+            position: absolute;
+    top: 45%;
+    display: grid;
+    grid-template-columns: 30px 20px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone_icon img{
+    width: 1rem;
+}
+.country_code label{
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    right: 10px;
+    top: -3px;
+}
+
+.phone input{
+    width: 200px;
+    border-width: 0px 0px 1px;
+    border-color: rgb(218, 218, 218);
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #323A47;
+    padding-bottom: 5px;
+    outline: none;
+
+}
+
+.terms{
+    position: absolute;
+    bottom: 5px;
+    font-size: 13px;
+    color: rgb(107, 107, 107);;
+}
+.terms span{
+    text-decoration: underline;
+}
+
+.signup_btn{
+    width: 300px;
+    background-color: var(--btn-color);
+    color: white;
+    border: none;
+    height: 40px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 16px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    display: none;
+}
+
+
