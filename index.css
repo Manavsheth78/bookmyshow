@@ -228,7 +228,9 @@ text-decoration: underline;
 
 .signup_btn{
 width: 300px;
-background-color: var(--btn-color);
+background-color: rgb(107, 107, 107);
+/* background-color: var( --btn-color); */
+
 color: white;
 border: none;
 height: 40px;
@@ -237,7 +239,11 @@ border-radius: 8px;
 font-size: 16px;
 padding-top: 10px;
 box-sizing: border-box;
-display: none;
+/* display: none; */
+}
+
+.signup_active{
+    background-color:var(--btn-color);
 }
 
 .overlay{
