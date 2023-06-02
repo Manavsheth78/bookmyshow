@@ -51,9 +51,69 @@ phone.addEventListener('input',function(){
         phone.style.borderColor = 'red';
         signupbtn.classList.remove('hidden');
         signupbtn.classList.remove('signup_active');
-
-
-
     }
 
 });
+
+
+
+// sliderbtn
+
+const leftbtn = document.querySelector('.slider__btn--left');
+const rightbtn = document.querySelector('.slider__btn--right');
+const slides = document.querySelectorAll('.slide');
+const slider = document.querySelector('.slider');
+// slider.style.transform = 'scale(0.4) translateX(-800px)';
+
+
+
+
+const goToSlide = function(slide){
+    slides.forEach((s,i)=>{
+        console.log( i, slide);
+        s.style.transform = `translateX(${100*(i-slide)}%)`;
+    });
+    
+}
+
+goToSlide(0);    //initial slide
+
+let curSlide = 0;
+let maxSlide = slides.length;
+
+//next slide
+
+const nextSlide = function(){
+    if(curSlide===maxSlide-1)
+    {
+        curSlide=0;
+    }
+    else{
+
+        curSlide++;
+    }
+
+    goToSlide(curSlide);
+}
+
+//Previous slide
+const PreviousSlide = function(){
+    if(curSlide===0)
+    {
+        curSlide=maxSlide-1;
+    }
+    else
+    curSlide--;
+    goToSlide(curSlide);
+}
+
+
+rightbtn.addEventListener('click',nextSlide);
+
+leftbtn.addEventListener('click',PreviousSlide);
+
+
+setInterval(nextSlide, 3000);
+
+
+

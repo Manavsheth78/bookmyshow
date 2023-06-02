@@ -1,8 +1,11 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     padding: 0;
     margin: 0;
+    /* overflow: hidden; */
 }
 
 :root{
@@ -60,7 +63,10 @@ body{
     border: none;
     outline: none;
     color: black;
-    font-size: 1rem;
+    font-size: 13px;
+    font-weight: 500;
+    -webkit-text-stroke: 2px solid black;
+    font-family: 'roboto', sans-serif;
 }
 
 .searchtab:placeholder-shown{
@@ -92,12 +98,66 @@ body{
 
 
 }
+    /* nav 2 */
+
+    .nav2{
+        
+        width: 100vw;
+        border: 1px solid black;
+        height: 5vh;
+        /* color: white; */
+        background-color:rgb(34, 37, 57)
+    }
+    .nav2-stack-1{
+        float: left;
+        display: flex;
+        align-items: center;
+        margin: 0px 30px;
+        
+    }
+
+    .nav2-stack-2{
+        float: right;
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .nav2-item{
+        margin: 6px 10px;
+        font-size: 14px;
+        color: rgb(201, 185, 196);
+        font-weight: 500px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .nav2-item a{
+        text-decoration: none;
+        color: rgb(201, 185, 196);
+    }
+    .nav2-item a:hover{
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav2-item .new::before{
+        content: "NEW";
+        color: red;
+        position: absolute;
+        top: 4rem;
+        left: 8.4rem;
+        font-size: 8px;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+    }
+
+
     /* modal */
 .modal{
     /* 
     display: none; */
-    width: 350px;
-    height: 450px;
+    width: 400px;
+    height: 500px;
     flex-direction: column;
     border: 1px solid black;
     background-color: white;    
@@ -112,6 +172,7 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 10;
+    border: none;
 }
 .modal h1{
     text-align: center;
@@ -139,11 +200,11 @@ height: 38px;
 box-sizing: border-box;
 padding: 5px 0px 0;
 text-align: center;
-border:  1px solid black;
+border:  1px solid rgba(0, 0, 0, 0.5);
 margin:  7px 10px;
 font-family: inherit;
 font-weight: 400;
-border-radius: 5px;
+border-radius: 3px;
 border-width: 1px solid black;
 
 }
@@ -258,4 +319,92 @@ box-sizing: border-box;
 
 .hidden{
     display: none;
+}
+
+
+
+
+.slider{
+    max-width: 100rem;
+    height: 20rem;
+    /* border: 1px solid black; */
+    margin: 5px auto;
+    position: relative;
+    overflow: hidden;
+}
+.slide{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform ease-out 0.5s;
+
+}
+.slide > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.slider__btn {
+    position: absolute;
+    top: 40%;
+    z-index: 10;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    font-family: inherit;
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .slider__btn--left {
+    left: 2%;
+    border-radius: 0 20px 20px 0;
+    transform: translate(-50%, -50%);
+
+  }
+  
+  .slider__btn--right {
+    right: 3%;
+    border-radius: 20px  0  0 20px ;
+    transform: translate(50%, -50%);
+  } 
+
+  .RecMovie{
+    margin: 30px;
+  }
+  .container{
+    margin: 20px 10px;
+    display: flex;
+    float: left;
+    /* border: 1px solid black; */
+    width: 100%;
+  }
+  .RecMovie h1{
+    margin: 20px 20px;
+    font-size: 1.5rem;
+    color: rgb(51, 51, 51);
+    /* font-weight: 800; */
+    font-family: 'Poppins', sans-serif;
+  }
+.movies{
+    width: 235px;
+    height: 390px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 10px;
+    border: none;
+
+}
+
+.movies img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
