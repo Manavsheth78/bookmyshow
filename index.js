@@ -130,7 +130,7 @@ swipebtnright.addEventListener('click',function(e){
     poster.forEach((p,i)=>{
         console.log( i, swipeNo);
         if(swipeNo==1){
-            p.style.transform = `translateX(${-522*swipeNo}%)`;
+            p.style.transform = `translateX(${-540*swipeNo}%)`;
                 swipebtnright.classList.add('hidden');
                 swipebtnleft.classList.remove('hidden');
 
