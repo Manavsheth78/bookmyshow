@@ -70,7 +70,7 @@ const slider = document.querySelector('.slider');
 
 const goToSlide = function(slide){
     slides.forEach((s,i)=>{
-        console.log( i, slide);
+        // console.log( i, slide);
         s.style.transform = `translateX(${100*(i-slide)}%)`;
     });
     
@@ -114,6 +114,59 @@ leftbtn.addEventListener('click',PreviousSlide);
 
 
 setInterval(nextSlide, 3000);
+
+
+
+//*scrolling effect
+
+    let swipeNo = 0;
+const swipebtnright = document.querySelector('.swipe-btn-right');
+const poster = swipebtnright.closest('.container').querySelectorAll('.movies');
+    const container = document.querySelector('.container');
+
+
+swipebtnright.addEventListener('click',function(e){
+    swipeNo++;
+    poster.forEach((p,i)=>{
+        console.log( i, swipeNo);
+        if(swipeNo==1){
+            p.style.transform = `translateX(${-522*swipeNo}%)`;
+                swipebtnright.classList.add('hidden');
+                swipebtnleft.classList.remove('hidden');
+
+        }
+        else{
+            swipebtnright.classList.remove('hidden');
+        }
+    
+    });
+    
+});
+
+//left btn 
+
+const swipebtnleft = document.querySelector('.swipe-btn-left');
+
+swipebtnleft.addEventListener('click',function(e){
+    swipeNo--;
+    poster.forEach((p,i)=>{
+        console.log( i, swipeNo);
+        if(swipeNo==0){
+            p.style.transform = `translateX(${100*swipeNo}%)`;
+            swipebtnleft.classList.add('hidden');
+            swipebtnright.classList.remove('hidden');
+        }
+        else{
+            swipebtnleft.classList.remove('hidden');
+        }
+    });
+
+}); 
+
+
+
+
+
 
 
 
